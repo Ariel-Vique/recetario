@@ -1,0 +1,19 @@
+{
+  "name": "recetario",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Ariel",
+  "type": "commonjs",
+  "main": "server.js",
+  "engines": {
+    "node": ">=22.13.0 <25"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}

@@ -1,0 +1,260 @@
+/* =========================================
+   1. VARIABLES DE COLOR Y MODO OSCURO
+   ========================================= */
+:root {
+  --fondo: #f3f1ec;
+  --superficie: #ffffff;
+  --texto: #22252a;
+  --texto-suave: #5a6069;
+  --borde: #dcd8ce;
+  --acento: #2e6f40;
+  --acento-hover: #21522f;
+  --alerta: #b5382a;
+  --alerta-hover: #8d291e;
+}
+
+body.oscuro {
+  --fondo: #16181a;
+  --superficie: #212428;
+  --texto: #eceef1;
+  --texto-suave: #a8afb9;
+  --borde: #353a40;
+  --acento: #4ca364;
+  --acento-hover: #64ba7b;
+  --alerta: #e05244;
+  --alerta-hover: #f27468;
+}
+
+/* =========================================
+   2. BASE Y DISTRIBUCIÓN GENERAL (MOBILE FIRST)
+   ========================================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--fondo);
+  color: var(--texto);
+}
+
+main {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+section {
+  background-color: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1.25rem;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+/* =========================================
+   3. ENCABEZADO CON FLEXBOX
+   ========================================= */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.5rem;
+  background-color: var(--superficie);
+  border-bottom: 1px solid var(--borde);
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.marca img {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.marca h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+/* =========================================
+   4. BARRA SUPERIOR DEL LISTADO Y TARJETAS
+   ========================================= */
+.barra-listado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--borde);
+}
+
+.barra-listado h2,
+.barra-listado p {
+  margin: 0;
+}
+
+#contador {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.grupo-filtro {
+  min-width: 180px;
+}
+
+#lista-recetas {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.tarjeta-receta {
+  background-color: var(--fondo);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-receta img {
+  width: 100%;
+  height: 155px;
+  object-fit: cover;
+  display: block;
+}
+
+.cuerpo-tarjeta {
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.cuerpo-tarjeta h3,
+.cuerpo-tarjeta p {
+  margin: 0;
+}
+
+.acciones-tarjeta {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+/* =========================================
+   5. FORMULARIO Y BOTONES
+   ========================================= */
+#seccion-formulario h2 {
+  margin-top: 0;
+}
+
+.campo {
+  margin-bottom: 0.85rem;
+}
+
+.fila-doble {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--borde);
+  border-radius: 6px;
+  background-color: var(--fondo);
+  color: var(--texto);
+  font-family: inherit;
+}
+
+textarea {
+  min-height: 85px;
+  resize: vertical;
+}
+
+.acciones-form {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 0.95rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--acento);
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--acento-hover);
+}
+
+.btn-eliminar {
+  background-color: var(--alerta);
+}
+
+.btn-eliminar:hover {
+  background-color: var(--alerta-hover);
+}
+
+#btn-cancelar {
+  background-color: var(--texto-suave);
+}
+
+#mensaje {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+}
+
+/* =========================================
+   6. ESCRITORIO (DESDE 768PX)
+   ========================================= */
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 330px;
+    align-items: start;
+  }
+
+  #seccion-formulario {
+    position: sticky;
+    top: 1rem;
+  }
+}
