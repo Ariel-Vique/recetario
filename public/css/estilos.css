@@ -1,6 +1,3 @@
-/* =========================================
-   1. VARIABLES DE COLOR Y MODO OSCURO
-   ========================================= */
 :root {
   --fondo: #f3f1ec;
   --superficie: #ffffff;
@@ -25,16 +22,13 @@ body.oscuro {
   --alerta-hover: #f27468;
 }
 
-/* =========================================
-   2. BASE Y DISTRIBUCIÓN GENERAL (MOBILE FIRST)
-   ========================================= */
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: var(--fondo);
   color: var(--texto);
 }
@@ -42,34 +36,32 @@ body {
 main {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 1.25rem;
+  padding: 20px;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 24px;
 }
 
 section {
   background-color: var(--superficie);
   border: 1px solid var(--borde);
   border-radius: 10px;
-  padding: 1.25rem;
+  padding: 20px;
 }
 
 footer {
   text-align: center;
-  padding: 1.25rem;
+  padding: 20px;
   color: var(--texto-suave);
-  font-size: 0.9rem;
+  font-size: 14px;
+  background-color: var(--superficie);
 }
 
-/* =========================================
-   3. ENCABEZADO CON FLEXBOX
-   ========================================= */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.85rem 1.5rem;
+  padding: 14px 24px;
   background-color: var(--superficie);
   border-bottom: 1px solid var(--borde);
 }
@@ -77,31 +69,26 @@ header {
 .marca {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 12px;
 }
 
 .marca img {
-  width: 44px;
-  height: 44px;
+  width: 60px;
   object-fit: cover;
   border-radius: 8px;
 }
 
 .marca h1 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 20px;
 }
 
-/* =========================================
-   4. BARRA SUPERIOR DEL LISTADO Y TARJETAS
-   ========================================= */
 .barra-listado {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 1rem;
-  padding-bottom: 0.75rem;
+  gap: 16px;
+  padding-bottom: 12px;
   border-bottom: 1px solid var(--borde);
 }
 
@@ -112,8 +99,8 @@ header {
 
 #contador {
   color: var(--texto-suave);
-  font-size: 0.9rem;
-  margin-top: 0.25rem;
+  font-size: 14px;
+  margin-top: 4px;
 }
 
 .grupo-filtro {
@@ -123,10 +110,10 @@ header {
 #lista-recetas {
   list-style: none;
   padding: 0;
-  margin: 1rem 0 0;
+  margin: 16px 0 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 1rem;
+  gap: 16px;
 }
 
 .tarjeta-receta {
@@ -146,10 +133,10 @@ header {
 }
 
 .cuerpo-tarjeta {
-  padding: 0.85rem;
+  padding: 14px;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 6px;
   flex: 1;
 }
 
@@ -160,40 +147,35 @@ header {
 
 .acciones-tarjeta {
   display: flex;
-  gap: 0.5rem;
+  gap: 8px;
   margin-top: auto;
-  padding-top: 0.5rem;
+  padding-top: 8px;
 }
 
-/* =========================================
-   5. FORMULARIO Y BOTONES
-   ========================================= */
 #seccion-formulario h2 {
   margin-top: 0;
 }
 
 .campo {
-  margin-bottom: 0.85rem;
+  margin-bottom: 14px;
 }
 
 .fila-doble {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
+  gap: 12px;
 }
 
 label {
   display: block;
-  margin-bottom: 0.3rem;
-  font-size: 0.9rem;
+  margin-bottom: 5px;
+  font-size: 14px;
   font-weight: 600;
 }
 
-input,
-select,
-textarea {
+input, select, textarea {
   width: 100%;
-  padding: 0.5rem 0.6rem;
+  padding: 8px 10px;
   border: 1px solid var(--borde);
   border-radius: 6px;
   background-color: var(--fondo);
@@ -209,11 +191,11 @@ textarea {
 .acciones-form {
   display: flex;
   justify-content: flex-end;
-  gap: 0.5rem;
+  gap: 8px;
 }
 
 button {
-  padding: 0.5rem 0.95rem;
+  padding: 8px 15px;
   border: none;
   border-radius: 6px;
   background-color: var(--acento);
@@ -239,14 +221,11 @@ button:hover {
 }
 
 #mensaje {
-  margin: 0.75rem 0 0;
-  font-size: 0.9rem;
+  margin: 12px 0 0;
+  font-size: 14px;
   color: var(--texto-suave);
 }
 
-/* =========================================
-   6. ESCRITORIO (DESDE 768PX)
-   ========================================= */
 @media (min-width: 768px) {
   main {
     grid-template-columns: 1fr 330px;
@@ -255,6 +234,6 @@ button:hover {
 
   #seccion-formulario {
     position: sticky;
-    top: 1rem;
+    top: 16px;
   }
 }

@@ -51,6 +51,6 @@ Se tomó como referencia la estructura general cliente-servidor con Express, SQL
 
 ## Imágenes
 
-- `public/img/logo.jpg`: generada con IA para el encabezado del proyecto.
+- `public/img/logo.png`: generada con IA para el encabezado del proyecto.
 - `public/img/sin-imagen.jpg`: generada con IA como imagen por defecto ante ausencia o error de carga.
 - Receta precargada de torta frita: imagen por URL externa desde Wikimedia Commons (`https://upload.wikimedia.org/wikipedia/commons/7/7f/TortaFrita.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original`)

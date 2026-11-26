@@ -121,7 +121,7 @@ function renderizarRecetas() {
 
   const cantidad = filtradas.length;
   parrafoContador.textContent =
-    cantidad === 1 ? '1 receta visible' : `${cantidad} recetas visibles`;
+    cantidad === 1 ? '1 receta visible' : `${cantidad} recetas`;
 }
 
 async function cargarRecetas() {
